@@ -9,7 +9,7 @@ app.get("/", (_req, res) => {
   res.send("Olá mundo!");
 });
 
-app.get("/alunos", (_req, res) => {
+app.get("/usuarios", (_req, res) => {
   fs.readFile(caminhoDoArquivo, "utf-8", (erro, dado) => {
     if (erro) {
       return res.status(400).json({ error: "Erro ao ler arquivo" });
