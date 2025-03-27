@@ -1,5 +1,5 @@
 const express = require("express");
-const alunoController = require("./controllers/controladorDeAluno");
+const controladorDeUsuario = require("./controllers/controladorDeUsuario");
 
 const app = express();
 
@@ -7,6 +7,6 @@ app.get("/", (_req, res) => {
   res.send("Olá mundo!");
 });
 
-app.get("/alunos", alunoController.getAlunos);
+app.get("/usuarios", controladorDeUsuario.obterTodosUsuarios);
 
 app.listen(3000, () => console.log("Servidor rodando!"));
